@@ -29,7 +29,9 @@ Example Playbook
 ```yaml
 - hosts: servers
   roles:
-  - { role: suzuki-shunsuke.docker-ubuntu, docker_users: ubuntu }
+  - role: suzuki-shunsuke.docker-ubuntu
+    docker_users:
+    - ubuntu
 ```
 
 License

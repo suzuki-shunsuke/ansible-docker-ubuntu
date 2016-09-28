@@ -1,11 +1,10 @@
 ---
 - hosts: default
   roles:
-  # - ansible-docker-ubuntu
-  - { role: ansible-docker-ubuntu, docker_users: vagrant}
-- hosts: default
+  - role: ansible-docker-ubuntu
+    docker_users:
+    - vagrant
   tasks:
   - command: docker --version
     register: result
-    # become: yes
   - debug: var=result

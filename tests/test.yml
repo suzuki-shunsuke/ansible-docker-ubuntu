@@ -2,4 +2,8 @@
 - hosts: localhost
   connection: local
   roles:
-  - { role: ansible-docker-ubuntu }
+  - role: ansible-docker-ubuntu
+  tasks:
+  - command: docker --version
+    register: result
+  - debug: var=result
