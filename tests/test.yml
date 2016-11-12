@@ -3,7 +3,9 @@
   roles:
   - ansible-docker-ubuntu
   tasks:
-  - command: docker --version
+  - name: Check docker version
+    command: docker --version
     register: result
+    changed_when: false
   - debug:
-      var: result
+      var: result.stdout

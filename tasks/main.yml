@@ -33,7 +33,7 @@
     update_cache: yes
     install_recommends: no
   become: "{{docker_nonroot}}"
-- name: Add the ubuntu user to the docker group
+- name: Add users to the docker group
   user:
     name: "{{item}}"
     groups: docker
