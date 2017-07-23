@@ -1,30 +1,29 @@
-docker-ubuntu
-===============
+# ansible-docker-ubuntu
 
 [![Build Status](https://travis-ci.org/suzuki-shunsuke/ansible-docker-ubuntu.svg?branch=master)](https://travis-ci.org/suzuki-shunsuke/ansible-docker-ubuntu)
 
-Install docker on Ubuntu.
+ansible module to install docker on Ubuntu.
 
 https://galaxy.ansible.com/suzuki-shunsuke/docker-ubuntu/
 
-Requirements
-------------
+## Requirements
 
 Nothing.
 
-Role Variables
---------------
+## Role Variables
 
-* docker_nonroot: Whether the remote_user is root or not. This variable is set automatically, and is used to execute tasks with the become option.
-* docker_users: Users who are added the docker group. The default value is an empty array.
+name | required | default | description
+--- | --- | --- | ---
+docker_version | no | latest | installed docker version
+docker_state | no | do nothing | the state of docker daemon
+docker_enabled | no | do nothing | whether docker daemon is enabled
+docker_users | no | [] | users who are added the docker group
 
-Dependencies
-------------
+## Dependencies
 
 Nothing.
 
-Example Playbook
-----------------
+## Example Playbook
 
 ```yaml
 - hosts: servers
@@ -32,9 +31,9 @@ Example Playbook
   - role: suzuki-shunsuke.docker-ubuntu
     docker_users:
     - ubuntu
+    become: yes
 ```
 
-License
--------
+## License
 
-MIT
+[MIT](LICENSE)

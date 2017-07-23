@@ -1,9 +1,10 @@
 ---
-- hosts: default
+- hosts: all
   roles:
-  - ansible-docker-ubuntu
+  - role: ansible-docker-ubuntu
+    become: yes
   tasks:
-  - name: Check docker version
+  - name: check docker version
     command: docker --version
     register: result
     changed_when: false
