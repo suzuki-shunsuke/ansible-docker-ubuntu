@@ -1,3 +1,5 @@
----
-# vars file for docker-ubuntu
-docker_nonroot: "{{ (ansible_env.HOME == '/root') | ternary('no', 'yes') }}"
+docker_ubuntu_archs:
+  amd64: amd64
+  x86_64: amd64
+  armhf: armhf
+  s390x: s390x
