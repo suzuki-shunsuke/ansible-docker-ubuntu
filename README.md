@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/suzuki-shunsuke/ansible-docker-ubuntu.svg?branch=master)](https://travis-ci.org/suzuki-shunsuke/ansible-docker-ubuntu)
 
-ansible module to install docker on Ubuntu.
+ansible role to install docker on Ubuntu.
 
 https://galaxy.ansible.com/suzuki-shunsuke/docker-ubuntu/
 
